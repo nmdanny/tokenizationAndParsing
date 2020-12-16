@@ -30,9 +30,12 @@ The grammar is as follows(Might have some similarity to Jack, don't remebmer Jac
 
     - There are more statements like `if`, `while` which I'll omit for simplicity
 
-- An expression is one of the following:
+- An expression is of the shape `term`, followed by 0 or more `op term`
+    - An `op` is a binary operator symbol, e.g, `+`, `-`
+    - A term can be one of the following:
+        - Integer constant (e.g, `1337`, omitted for siplicity)
+        - Keyword constant (e.g, `true`, `false` - omitted for simplicity)
+        - Variable name (identifier)
+        - `(expression)` 
 
-    - Variable, e.g `variableName` which is an identifier
-    - A binary assignment of two expressions, e.g, `expression1 + expression2`, where both `expression1` and `expression2` are expressions, and `+` is a symbol
-
-
+        - In reality there are more terms (e.g, subroutine calls, array indexers, etc..)
